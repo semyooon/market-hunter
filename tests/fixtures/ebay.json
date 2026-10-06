@@ -1,0 +1,15 @@
+{
+  "itemSummaries": [
+    {
+      "title": "WD Ultrastar DC HC560 20TB SATA Enterprise HDD, tested",
+      "itemWebUrl": "https://www.ebay.de/itm/123456?hash=item1",
+      "price": {"value": "240.00", "currency": "EUR"},
+      "shippingOptions": [{"shippingCost": {"value": "12.00", "currency": "EUR"}}],
+      "itemLocation": {"country": "DE"},
+      "condition": "Used",
+      "seller": {"username": "server-gear"},
+      "image": {"imageUrl": "https://i.ebayimg.com/images/example.jpg"},
+      "shortDescription": "20TB SATA, SMART tested"
+    }
+  ]
+}

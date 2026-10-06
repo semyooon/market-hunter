@@ -43,12 +43,12 @@ For eBay, create a free eBay Developer application and set its Browse API client
 
 ## Connect Codex desktop
 
-Use a local stdio MCP bridge rather than exposing the VPS publicly. Add this to your user Codex `config.toml` (on Windows, usually `%USERPROFILE%\.codex\config.toml`):
+Use a local stdio MCP bridge rather than exposing the VPS publicly. Add this to your user Codex `config.toml` (on Windows, usually `%USERPROFILE%\\.codex\\config.toml`):
 
 ```toml
 [mcp_servers.market_hunter]
 command = "uv"
-args = ["run", "--directory", "C:\path\to\market-hunter", "market-hunter-mcp"]
+args = ["run", "--directory", "C:\\path\\to\\market-hunter", "market-hunter-mcp"]
 
 [mcp_servers.market_hunter.env]
 MARKET_HUNTER_API_URL = "http://127.0.0.1:8000"

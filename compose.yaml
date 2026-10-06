@@ -1,0 +1,25 @@
+services:
+  api:
+    build: .
+    env_file: .env
+    environment:
+      MARKET_HUNTER_DATABASE_PATH: /data/market-hunter.db
+    ports:
+      # Deliberately not public. Reach it from your laptop over Tailscale/WireGuard.
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - market_hunter_data:/data
+    restart: unless-stopped
+
+  worker:
+    build: .
+    command: ["market-hunter-worker"]
+    env_file: .env
+    environment:
+      MARKET_HUNTER_DATABASE_PATH: /data/market-hunter.db
+    volumes:
+      - market_hunter_data:/data
+    restart: unless-stopped
+
+volumes:
+  market_hunter_data:
